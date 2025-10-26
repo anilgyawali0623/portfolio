@@ -1,11 +1,22 @@
-import React from 'react'
-
+import React, { useState } from "react";
+import { LoadingScreen } from "./components/LoadingScreen";
 function App() {
+  const [isLoading, setIsLoading] = useState(false);
+
   return (
-    <div>
-      
-    </div>
-  )
+    <>
+      {!isLoading && <LoadingScreen onComplete={() => setIsLoading(true)} />}
+
+      <div
+        className={`min-h-screen transition-opacity duration-700 ${
+          isLoading ? "opacity-100" : "opacity-0"
+        } bg-black text-gray-100`}
+      >
+
+        
+      </div>
+    </>
+  );
 }
 
-export default App
+export default App;
