@@ -45,6 +45,13 @@ function Navbar({ menuOpen, setMenuOpen }) {
             >
               Contact
             </a>
+              <a
+              href="/anilresume.pdf"
+              download="anilresume.pdf"
+              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-all"
+            >
+              Download CV
+            </a>
           </div>
         </div>
       </div>
