@@ -17,6 +17,7 @@ import {
   SiExpress,
   SiRedis,
 } from "react-icons/si";
+import RevealComponent from "../RevealComponent";
 
 export const Projects = () => {
   const projects = [
@@ -79,6 +80,8 @@ export const Projects = () => {
       id="projects"
       className="min-h-screen flex items-center justify-center py-20"
     >
+        <RevealComponent>
+
       <div className="max-w-5xl mx-auto px-4">
         <h2 className="text-3xl font-bold mb-8 bg-linear-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
           Featured Projects
@@ -86,19 +89,19 @@ export const Projects = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((project, i) => (
-            <div
+              <div
               key={i}
               className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition"
-            >
+              >
               <h3 className="text-xl font-bold mb-2">{project.title}</h3>
               <p className="text-gray-400 mb-4">{project.description}</p>
 
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.techStack.map((tech, key) => (
-                  <span
+                    <span
                     key={key}
                     className="flex items-center gap-2 bg-blue-500/10 text-blue-400 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 transition"
-                  >
+                    >
                     {tech.icon}
                     {tech.name}
                   </span>
@@ -111,7 +114,7 @@ export const Projects = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-400 hover:text-blue-300 transition-colors"
-                >
+                  >
                   View Project →
                 </a>
                 <a
@@ -119,7 +122,7 @@ export const Projects = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-1 text-gray-400 hover:text-gray-200 transition-colors"
-                >
+                  >
                   <FaGithub /> View Code
                 </a>
               </div>
@@ -127,6 +130,7 @@ export const Projects = () => {
           ))}
         </div>
       </div>
+          </RevealComponent>
     </section>
   );
 };

@@ -29,11 +29,22 @@ body {
 }
 
 .animate-blink {
-  animation: blink 0.8s step-end infinite;
+  animation: blink 1s step-end infinite;
 }
 
 @layer utilities {
   .animate-loading-bar {
-    animation: loading 0.8s ease infinite;
+    animation: loading 1s ease infinite;
   }
+}
+.reveal{
+   opacity: 0;
+   transform: translateY(20px);
+   transition: opacity 1s ease, trasfrom 1s ease;
+
+}
+
+.reveal.visible{
+   opacity: 1;
+    transform: translateY(0);
 }
